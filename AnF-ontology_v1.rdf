@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="https://rdf.archives-nationales.culture.gouv.fr/ontology#"
+         xmlns:anf-onto="https://rdf.archives-nationales.culture.gouv.fr/ontology#"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ric-dft="https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#"
+         xmlns:ric-rst="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#"
+         xmlns:rico="https://www.ica.org/standards/RiC/ontology#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:voaf="http://purl.org/vocommons/voaf#"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xml:base="https://rdf.archives-nationales.culture.gouv.fr/ontology">
+   <owl:Ontology rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology">
+      <owl:imports rdf:resource="https://www.ica.org/standards/RiC/ontology/1.1"/>
+      <cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+      <dc:contributor xml:lang="en">Florence Clavaud (head of the Lab, Archives nationales de
+            France, also member of EGAD and lead of EGAD RiC-O team from 2012)</dc:contributor>
+      <dc:contributor xml:lang="fr">Florence Clavaud (responsable du Lab, Archives nationales de
+            France ; membre d'ICA/EGAD et responsable du développement de RiC-O depuis 2012,
+            also member of EGAD )</dc:contributor>
+      <dc:language>en-EN</dc:language>
+      <dc:language>fr-FR</dc:language>
+      <dc:rights xml:lang="en">Copyright 2025-, Archives nationales de France (AnF)</dc:rights>
+      <dc:rights xml:lang="fr">Copyright 2025-, Archives nationales de France (AnF)</dc:rights>
+      <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-5681-4850"/>
+      <dcterms:creator>
+         <rdf:Description>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <foaf:homepage>https://www.archives-nationales.culture.gouv.fr</foaf:homepage>
+            <foaf:mbox>le-lab.archives-nationales@culture.gouv.fr</foaf:mbox>
+            <foaf:name xml:lang="en">Archives nationales (France). Lab</foaf:name>
+            <foaf:name xml:lang="fr">Archives nationales (France). Lab</foaf:name>
+         </rdf:Description>
+      </dcterms:creator>
+      <dcterms:description rdf:parseType="Literal">
+         <html:div xml:lang="en">
+            <html:p>The ontology created by the Archives nationales de France (AnF) for
+                    describing the archival fonds and collections the institution holds. It is an
+                    extension of RiC-O (at the moment RiC-O 1.1).</html:p>
+         </html:div>
+      </dcterms:description>
+      <dcterms:description rdf:parseType="Literal">
+         <html:div xml:lang="fr">
+            <html:p>L'ontologie créée par les Archives nationales de France (AnF) pour
+                    décrire les fonds et collections d'archives que l'institution
+                    conserve. Il s'agit d'une extension de l'ontologie ICA/RiC-O dans
+                    sa derniere version en date (actuellement RiC-O 1.1).</html:p>
+         </html:div>
+      </dcterms:description>
+      <dcterms:language rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      <dcterms:language rdf:resource="http://id.loc.gov/vocabulary/iso639-2/fre"/>
+      <dcterms:publisher rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/agent/005061"/>
+      <dcterms:title xml:lang="fr">L'ontologie des Archives nationales de France
+            (anf-onto)</dcterms:title>
+      <dcterms:title xml:lang="en">The ontology of the Archives nationales de France
+            (anf-onto)</dcterms:title>
+      <vann:preferredNamespacePrefix>anf-onto</vann:preferredNamespacePrefix>
+      <vann:preferredNamespaceUri>https://rdf.archives-nationales.culture.gouv.fr/ontology#</vann:preferredNamespaceUri>
+      <skos:historyNote rdf:parseType="Literal">
+         <html:div xml:lang="fr">
+            <html:p>11 août 2025 : création des premiers composants, en partant de l'état actuel
+                    des données sur els archives notariales et des référentiels sémantisés.</html:p>
+         </html:div>
+      </skos:historyNote>
+      <skos:scopeNote rdf:parseType="Literal">
+         <html:div xml:lang="en">
+            <html:p>TODO</html:p>
+         </html:div>
+      </skos:scopeNote>
+      <skos:scopeNote rdf:parseType="Literal">
+         <html:div xml:lang="fr">
+            <html:p>Cette ontologie est actuellement utilisée dans le cadre des projets suivants
+                    :</html:p>
+            <html:ul>
+               <html:li>Sémanfisation et publication d'une partie des métadonnées
+                        décrivant les archives des notaires parisiens conservées aux AnF</html:li>
+               <html:li>Sémantisation et publication des référentiels des AnF</html:li>
+               <html:li>Sémantisation et publication de métadonnées décrivant les archives de
+                        l'université de Paris au Moyen Age (projet ORESM)</html:li>
+            </html:ul>
+            <html:p>Elle étend RiC-O pour servir les besoins de ces projets.</html:p>
+            <html:p>Prochainement elle devrait aussi servir dans le cadre du projet ANR
+                    AGAPE.</html:p>
+            <html:p>A COMPLETER</html:p>
+         </html:div>
+      </skos:scopeNote>
+   </owl:Ontology>
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+   <!-- http://creativecommons.org/ns#license -->
+   <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+   <!-- http://purl.org/dc/elements/1.1/contributor -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+   <!-- http://purl.org/dc/elements/1.1/format -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format">
+      <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+   </owl:AnnotationProperty>
+   <!-- http://purl.org/dc/elements/1.1/language -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+   <!-- http://purl.org/dc/elements/1.1/rights -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+   <!-- http://purl.org/dc/terms/contributor -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+   <!-- http://purl.org/dc/terms/creator -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+   <!-- http://purl.org/dc/terms/description -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+   <!-- http://purl.org/dc/terms/language -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
+   <!-- http://purl.org/dc/terms/publisher -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+   <!-- http://purl.org/dc/terms/title -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+   <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+   <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+   <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+   <!-- http://www.w3.org/2004/02/skos/core#example -->
+   <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+   <!-- http://www.w3.org/2004/02/skos/core#note -->
+   <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+   <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+   <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+   <!-- http://xmlns.com/foaf/0.1/homepage -->
+   <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+   <!-- http://xmlns.com/foaf/0.1/mbox -->
+   <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
+   <!-- http://xmlns.com/foaf/0.1/name -->
+   <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#absorbed -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#absorbed">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#wasAbsorbedBy"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:comment xml:lang="fr">Inverse de la propriété
+            'anf-onto:wasAbsorbedBy'.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">a absorbé</rdfs:label>
+      <rdfs:label xml:lang="en">absorbed</rdfs:label>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#crossesOrCrossed -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#crossesOrCrossed">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#isOrWasCrossedBy"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">crosses or crossed</rdfs:label>
+      <rdfs:label xml:lang="fr">traverse ou a traversé</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_025-d3nz8d7i5b--sl1whz2vnexo"/>
+      <skos:scopeNote xml:lang="fr">Utilisé pour l'instant pour spécifier qu'une voie
+            parisienne traverse ou a traversé un quartier ou un arrondissement de
+            Paris.</skos:scopeNote>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#isOrWasCrossedBy -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isOrWasCrossedBy">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#crossesOrCrossed"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:comment xml:lang="fr">Inverse de la propriété
+            'anf-onto:crossesOrCrossed'.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">est ou a été traversé par</rdfs:label>
+      <rdfs:label xml:lang="en">is or was crossed by</rdfs:label>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#isOrWasLocatedOnStreet -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isOrWasLocatedOnStreet">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#hasOrHadLocation"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#isStreetOnWhichIsOrWasLocated"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">est ou a été situé sur la rue</rdfs:label>
+      <rdfs:label xml:lang="en">is or was located on street</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_025-d3nz9hn9u3-i3kstobw2twh"/>
+      <skos:scopeNote xml:lang="fr">Utilisé pour l'instant pour spécifier qu'un point
+            (le plus souvent identifié par un numéro), point de départ ou de fin d'une rue, est
+            localisé sur une autre rue de Paris. On pourrait bien sûr ultérieurement l'employer
+            pour localiser les édifices parisiens listés dans le référentiel
+            concerné.</skos:scopeNote>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#isPointWhereStreetEndsOrEnded -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isPointWhereStreetEndsOrEnded">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#streetEndsOrEndedAtPoint"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">est le point où se termine ou se terminait la rue</rdfs:label>
+      <rdfs:label xml:lang="en">is point where street ends or ended</rdfs:label>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#isPointWhereStreetStartsOrStarted -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isPointWhereStreetStartsOrStarted">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#streetStartsOrStartedAtPoint"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">est le point où commence ou commençait la rue</rdfs:label>
+      <rdfs:label xml:lang="en">is point where street starts or started</rdfs:label>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#isStreetOnWhichIsOrWasLocated -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isStreetOnWhichIsOrWasLocated">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isOrWasLocationOf"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#isOrWasLocatedOnStreet"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:comment xml:lang="fr">Inverse de la propriété
+            'anf-onto:isOrWasLocatedOnStreet'.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">est la rue où est ou a été localisé</rdfs:label>
+      <rdfs:label xml:lang="en">is street where is or was located</rdfs:label>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#isStreetWhereStreetEndsOrEnded -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isStreetWhereStreetEndsOrEnded">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#streetEndsOrEndedOnStreet"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <owl:propertyChainAxiom rdf:parseType="Collection">
+         <rdf:Description rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isStreetOnWhichIsOrWasLocated"/>
+         <rdf:Description rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isPointWhereStreetEndsOrEnded"/>
+      </owl:propertyChainAxiom>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">est la rue où se termine ou se terminait la rue</rdfs:label>
+      <rdfs:label xml:lang="en">is street where street ends or ended</rdfs:label>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#isStreetWhereStreetStartsOrStarted -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isStreetWhereStreetStartsOrStarted">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#streetStartsOrStartedOnStreet"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <owl:propertyChainAxiom rdf:parseType="Collection">
+         <rdf:Description rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isStreetOnWhichIsOrWasLocated"/>
+         <rdf:Description rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isPointWhereStreetStartsOrStarted"/>
+      </owl:propertyChainAxiom>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">est la rue où commence ou commençait la rue</rdfs:label>
+      <rdfs:label xml:lang="en">is street where street starts or started</rdfs:label>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#partiallyAbsorbed -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#partiallyAbsorbed">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#wasPartiallyAbsorbedBy"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:comment xml:lang="fr">Inverse de la propriété
+            'anf-onto:wasPartiallyAbsorbedBy'.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">a partiellement absorbé</rdfs:label>
+      <rdfs:label xml:lang="en">partially absorbed</rdfs:label>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#streetEndsOrEndedAtPoint -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#streetEndsOrEndedAtPoint">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#isPointWhereStreetEndsOrEnded"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">rue se termine ou se terminait au point</rdfs:label>
+      <rdfs:label xml:lang="en">street ends or ended at point</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_025-d3nz8d227c-149uvd4dzzl1p"/>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#streetEndsOrEndedOnStreet -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#streetEndsOrEndedOnStreet">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#isStreetWhereStreetEndsOrEnded"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <owl:propertyChainAxiom rdf:parseType="Collection">
+         <rdf:Description rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#streetEndsOrEndedAtPoint"/>
+         <rdf:Description rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isOrWasLocatedOnStreet"/>
+      </owl:propertyChainAxiom>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">rue se termine ou se terminait sur la rue</rdfs:label>
+      <rdfs:label xml:lang="en">street ends or ended on street</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_025-d3nz8d9ikq-19wf86uzuy1gu"/>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#streetStartsOrStartedAtPoint -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#streetStartsOrStartedAtPoint">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#isPointWhereStreetStartsOrStarted"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">rue commence ou commençait au point</rdfs:label>
+      <rdfs:label xml:lang="en">street starts or started at point</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_025-d3nz8d227c-149uvd4dzzl1p"/>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#streetStartsOrStartedOnStreet -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#streetStartsOrStartedOnStreet">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#isStreetWhereStreetStartsOrStarted"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <owl:propertyChainAxiom rdf:parseType="Collection">
+         <rdf:Description rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#streetStartsOrStartedAtPoint"/>
+         <rdf:Description rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#isOrWasLocatedOnStreet"/>
+      </owl:propertyChainAxiom>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">rue commence ou commençait sur la rue</rdfs:label>
+      <rdfs:label xml:lang="en">street starts or started on street</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_025-d3nz8d9ikq-19wf86uzuy1gu"/>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#wasAbsorbedBy -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#wasAbsorbedBy">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#absorbed"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">a été absorbé par</rdfs:label>
+      <rdfs:label xml:lang="en">was absorbed by</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_020-d3nyv25yjj-fwdgjumq2j3w"/>
+      <skos:scopeNote xml:lang="fr">Utilisé pour l'instant pour spécifier qu'une commune
+            a été absorbée par une autre (cas des communes rattachées à Paris).</skos:scopeNote>
+   </owl:ObjectProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#wasPartiallyAbsorbedBy -->
+   <owl:ObjectProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#wasPartiallyAbsorbedBy">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+      <owl:inverseOf rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#partiallyAbsorbed"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">a été partiellement absorbé par</rdfs:label>
+      <rdfs:label xml:lang="en">was partially absorbed by</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_020-d3m0bp3plo8-lggc65i6zxfm"/>
+      <skos:scopeNote xml:lang="fr">Utilisé pour l'instant pour spécifier qu'une commune
+            a été partiellement absorbée par une autre (cas des communes dont le territoire a été
+            partiellement rattaché à Paris).</skos:scopeNote>
+   </owl:ObjectProperty>
+   <!-- https://www.ica.org/standards/RiC/ontology#hasDocumentaryFormType -->
+   <owl:ObjectProperty rdf:about="https://www.ica.org/standards/RiC/ontology#hasDocumentaryFormType"/>
+   <!-- https://www.ica.org/standards/RiC/ontology#hasRecordSetType -->
+   <owl:ObjectProperty rdf:about="https://www.ica.org/standards/RiC/ontology#hasRecordSetType"/>
+   <!-- https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace -->
+   <owl:ObjectProperty rdf:about="https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace"/>
+   <!-- https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith -->
+   <owl:ObjectProperty rdf:about="https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith"/>
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+   <!-- http://www.w3.org/ns/dcat#version -->
+   <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#version"/>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#endingAtPoint -->
+   <owl:DatatypeProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#endingAtPoint">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#location"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">ending at point</rdfs:label>
+      <rdfs:label xml:lang="fr">point d'arrivée</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_025-d3nz8cz9bl--jgvrzsvh2dx2"/>
+      <skos:scopeNote xml:lang="fr">Utilisé actuellement pour spécifier le point d'arrivée
+            d'une voie, lorsque celui-ci n'est connu que par sa dénomination ou son
+            adresse littérale. Si le point d'arrivée a pu être localisé dans une rue dotée
+            d'un URI, on utilise la propriété streetEndsOrEndedAtPoint.</skos:scopeNote>
+   </owl:DatatypeProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#endingOnStreet -->
+   <owl:DatatypeProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#endingOnStreet">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#location"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">ending on street</rdfs:label>
+      <rdfs:label xml:lang="fr">rue d'arrivée</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_025-d3nz8nrd0y--1escztyea605h"/>
+      <skos:scopeNote xml:lang="fr">Utilisé actuellement pour spécifier la rue sur laquelle se
+            termine une voie, lorsqu'il n'est pas possible de déterminer quelle est cette
+            rue. Si la rue d'arrivée est connue et dotée d'un URI, on utilise la
+            streetEndsOrEndedOnStreet.</skos:scopeNote>
+   </owl:DatatypeProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#someSubactivitiesWithDate -->
+   <owl:DatatypeProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#someSubactivitiesWithDate">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#date"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Activity"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">des sous-activités ayant pour date</rdfs:label>
+      <rdfs:label xml:lang="en">some subactivities with date</rdfs:label>
+      <skos:scopeNote xml:lang="fr">Pourrait être utilisé pour spécifier la date d'une des
+            sous-activités d'une activité (de dénomination, ouverture, alignement...) relative
+            à une rue de Paris. Cette activité peut être décrite dans un texte contenant une liste
+            d'événements, sans qu'il soit possible d'isoler la description de chacun
+            de ces événements, alors qu'on est en mesure d'isoler chacune des dates
+            associées.</skos:scopeNote>
+   </owl:DatatypeProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#startingAtPoint -->
+   <owl:DatatypeProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#startingAtPoint">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#location"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">point de départ</rdfs:label>
+      <rdfs:label xml:lang="en">starting at point</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_025-d3nz8ygf0f--1ty2dbadd1km"/>
+      <skos:scopeNote xml:lang="fr">Utilisé actuellement pour spécifier le point de départ
+            d'une voie, lorsque celui-ci n'est connu que par sa dénomination ou son
+            adresse littérale. Si le point de départ a pu être localisé dans une rue dotée d'un
+            URI, on utilise la propriété streetStartsOrStartedAtPoint.</skos:scopeNote>
+   </owl:DatatypeProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#startingOnStreet -->
+   <owl:DatatypeProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#startingOnStreet">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#location"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">rue de départ</rdfs:label>
+      <rdfs:label xml:lang="en">starting on street</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/place/FRAN_RI_025-d3nz8et8kl--sl0tclv3hdwl"/>
+      <skos:scopeNote xml:lang="fr">Utilisé actuellement pour spécifier la rue dont part une voie,
+            lorsqu'il n'est pas possible de déterminer quelle est cette rue. Si la rue de
+            départ est connue et dotée d'un URI, on utilise la
+            streetStartsOrStartedOnStreet.</skos:scopeNote>
+   </owl:DatatypeProperty>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#streetStatus -->
+   <owl:DatatypeProperty rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#streetStatus">
+      <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#note"/>
+      <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:label xml:lang="fr">statut de la rue</rdfs:label>
+      <rdfs:label xml:lang="en">street status</rdfs:label>
+      <skos:scopeNote xml:lang="fr">Utilisé actuellement pour spécifier si la voie de Paris
+            décrite est une voie actuelle ou caduque d'après la nomenclature officielle des
+            voies parisiennes en date du 31 mai 2023</skos:scopeNote>
+   </owl:DatatypeProperty>
+   <!-- https://www.ica.org/standards/RiC/ontology#location -->
+   <owl:DatatypeProperty rdf:about="https://www.ica.org/standards/RiC/ontology#location"/>
+   <!-- https://www.ica.org/standards/RiC/ontology#physicalCharacteristicsNote -->
+   <owl:DatatypeProperty rdf:about="https://www.ica.org/standards/RiC/ontology#physicalCharacteristicsNote"/>
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+   <!-- http://xmlns.com/foaf/0.1/Organization -->
+   <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#ActeNotarie -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#ActeNotarie">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Record"/>
+      <rdfs:subClassOf>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class>
+                  <owl:complementOf>
+                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.ica.org/standards/RiC/ontology#hasDocumentaryFormType"/>
+                        <owl:hasValue rdf:resource="https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#AuthorityRecord"/>
+                     </owl:Restriction>
+                  </owl:complementOf>
+               </owl:Class>
+               <owl:Class>
+                  <owl:complementOf>
+                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.ica.org/standards/RiC/ontology#hasDocumentaryFormType"/>
+                        <owl:hasValue rdf:resource="https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid"/>
+                     </owl:Restriction>
+                  </owl:complementOf>
+               </owl:Class>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:subClassOf>
+      <owl:disjointWith rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#InstrumentRecherche"/>
+      <owl:disjointWith rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#NoticeAutorite"/>
+      <owl:disjointWith rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#Repertoire"/>
+      <rdfs:comment xml:lang="fr">Acte établi par un notaire. Inclut les minutes, premiers
+            originaux des actes notariés, complets de toutes leurs annexes, signées du ou des
+            notaires et des parties à l’acte et dont le notaire a charge de la conservation jusqu’à
+            ce que la loi en transfère la responsabilité à un service public d’archives. Les minutes
+            sont inscrites au répertoire de ce même notaire et font foi (valeur probatoire),
+            constituant des actes authentiques au sens du Code civil.</rdfs:comment>
+      <rdfs:comment xml:lang="en">An act drawn up by a notary. Includes the minutes, first
+            originals of the notarial acts, complete with all their appendices, signed by the
+            notary(ies) and the parties and for which the notary is responsible for keeping until
+            the law transfers responsibility to a public archive service. The minutes are registered
+            in the registry of this same notary (which results in mentions of acts) and are
+            authentic.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">Acte notarié</rdfs:label>
+      <rdfs:label xml:lang="en">Notarial Act</rdfs:label>
+      <skos:note xml:lang="fr">Actuellement, dans le jeu de métadonnées du démonstrateur sur les
+            archives notariales, regroupe l'ensemble des : ?na tel que ?na a rico:Record .
+            MINUS {?ra rico:hasDocumentaryFormType
+            &lt;https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid&gt;}
+            MINUS {?ra rico:hasDocumentaryFormType
+            &lt;https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#AuthorityRecord&gt;}
+            MINUS {?ra a anf-onto:Repertoire }</skos:note>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#Adresse -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#Adresse">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">Address in Paris</rdfs:label>
+      <rdfs:label xml:lang="fr">Adresse à Paris</rdfs:label>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#Archive -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#Archive">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+      <owl:disjointWith rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#InstrumentRecherche"/>
+      <owl:disjointWith rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology#NoticeAutorite"/>
+      <rdfs:comment xml:lang="en">Any type of archival resource, whether it is an item or a group
+            of documents.</rdfs:comment>
+      <rdfs:comment xml:lang="fr">Tout ensemble ou pièce d’archives, hors des instruments de
+            recherche et notices d’autorité.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">Archives</rdfs:label>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#CopieNumerique -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#CopieNumerique">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="https://www.ica.org/standards/RiC/ontology#physicalCharacteristicsNote"/>
+            <owl:hasValue xml:lang="en">format : image/jpeg</owl:hasValue>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:comment xml:lang="en">A true and complete digital copy of an archival resource,
+            produced for the purpose of communication to the public as a substitute for the
+            original</rdfs:comment>
+      <rdfs:comment xml:lang="fr">Toute copie numérique fidèle et intégrale d’une ressource
+            archivistique, produite à des fins de communication aux publics comme substitut de
+            l’original.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">Copie numérique</rdfs:label>
+      <rdfs:label xml:lang="en">Digital Copy</rdfs:label>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#EdificeParisien -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#EdificeParisien">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">Building in Paris</rdfs:label>
+      <rdfs:label xml:lang="fr">Édifice de Paris</rdfs:label>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#EtudeNotariale -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#EtudeNotariale">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#CorporateBody"/>
+      <rdfs:comment xml:lang="en">Corporate body within which a notary practices.</rdfs:comment>
+      <rdfs:comment xml:lang="fr">Organisme au sein duquel exerce un notaire.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">Notarial Office</rdfs:label>
+      <rdfs:label xml:lang="fr">Étude notariale</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/agent/010128"/>
+      <skos:note xml:lang="fr">Actuellement, regroupe l'ensemble ?e tel que : ?e a
+            rico:CorporateBody; rico:hasOrHadCorporateBodyType
+            &lt;https://rdf.archives-nationales.culture.gouv.fr/corporateBodyType/FRAN_RI_104-d5blomr902-13lmns87apgev&gt;"@fr.</skos:note>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#Fonds -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#Fonds">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="https://www.ica.org/standards/RiC/ontology#hasRecordSetType"/>
+            <owl:hasValue rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds"/>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">Fonds d'archives</rdfs:label>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#InstrumentRecherche -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#InstrumentRecherche">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Record"/>
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="https://www.ica.org/standards/RiC/ontology#hasDocumentaryFormType"/>
+            <owl:hasValue rdf:resource="https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid"/>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">Archival Finding Aid</rdfs:label>
+      <rdfs:label xml:lang="fr">Instrument de recherche archivistique</rdfs:label>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#ListeActes -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#ListeActes">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordPart"/>
+      <rdfs:comment xml:lang="en">Logical subdivision of a notary's registry, most often
+            relating to a given period, for example a year.</rdfs:comment>
+      <rdfs:comment xml:lang="fr">Subdivision logique d’un répertoire de notaire, concernant le
+            plus souvent une période donnée, par exemple une année.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">List of Acts</rdfs:label>
+      <rdfs:label xml:lang="fr">Liste d’actes notariés</rdfs:label>
+      <skos:note xml:lang="fr">Actuellement, regroupe l'ensemble des : RecordPart, inclus
+            dans un Repertoire, et dont l'intitulé commence par 'Liste'. ?doc a
+            rico:RecordPart ; rico:title ?title ; rico:isOrWasConstituentOf+ ?rep . ?rep a
+            anf-onto:Repertoire . FILTER (strstarts(LCASE(STR(?title)),
+            "liste"))</skos:note>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#MentionActe -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#MentionActe">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordPart"/>
+      <rdfs:comment xml:lang="fr">Mention d’un acte dans une liste d’actes notariés. Le notaire y
+            spécifie toujours la date de l’acte (année et mois, pas toujours le quantième dans le
+            mois), le type d’acte, le nom de l’intéressé ou des parties.</rdfs:comment>
+      <rdfs:comment xml:lang="en">Mention of an act in a list of notarial acts. The notary always
+            specifies there the date of the act (year and month, not always the date in the month),
+            the type of act, the name of the person concerned or the parties. Mentions of acts have
+            been described from certain registries, as they provide valuable information on the
+            content of the bundles of minutes.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">Mention d’acte notarié</rdfs:label>
+      <rdfs:label xml:lang="en">Mention of an act</rdfs:label>
+      <skos:note xml:lang="fr">Actuellement, regroupe l'ensemble des ?mention tel que :
+            ?mention rdf:type rico:RecordPart ; rdfs:label ?label ; rico:isOrWasConstituentOf+ ?rep
+            . ?rep a anf-onto:Repertoire . FILTER (!STRSTARTS(LCASE(STR(?label)), 'page de
+            titre')) FILTER (!STRSTARTS(LCASE(STR(?label)), 'liste')) FILTER
+            (!STRSTARTS(LCASE(STR(?label)), 'table')) FILTER
+            (!STRSTARTS(LCASE(STR(?label)), 'du '))</skos:note>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#MotMatiere -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#MotMatiere">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Concept"/>
+      <rdfs:comment xml:lang="en">Any thing that is neither an agent nor a place, and that can be
+            the subject of an archival resource. It can be a material object, an event, a concept,
+            etc. It may have a proper name.</rdfs:comment>
+      <rdfs:comment xml:lang="fr">Toute chose qui n’est ni un agent ni un lieu, et qui peut être
+            le sujet d’une ressource archivistique. Peut notamment être un objet matériel, un
+            événement, un concept. Peut avoir un nom propre.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">Mot matière</rdfs:label>
+      <rdfs:label xml:lang="en">Subject</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/thing/FRAN_RI_004-d-2ipxg4k3u--p2e5rr8idpe6"/>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/thing/FRAN_RI_004-d3ndep7zyu-2xmxxewhm5is"/>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/thing/FRAN_RI_004-d3ndfs1msf--dpao84rg1wzh"/>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/thing/FRAN_RI_004-d3ndfvqq8u--xrlftjja98cp"/>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/thing/FRAN_RI_004-d699mrdmy0o--3vd52fd48039"/>
+      <skos:note xml:lang="fr">Actuellement utilisé pour regrouper les concepts définis dans le
+            référentiel matières des Archives nationales.</skos:note>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#Notaire -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#Notaire">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Person"/>
+      <rdfs:comment xml:lang="en">A lawyer invested with a mission of public authority, who
+            prepares authentic acts on behalf of his clients.</rdfs:comment>
+      <rdfs:comment xml:lang="fr">Juriste investi d'une mission d'autorité publique, qui
+            prépare des contrats sous la forme authentique, pour le compte de ses
+            clients.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="fr">Notaire</rdfs:label>
+      <rdfs:label xml:lang="en">Notary</rdfs:label>
+      <skos:example rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/agent/011224"/>
+      <skos:note xml:lang="fr">Actuellement, regroupe l'ensemble ?p tel que : ?p a
+            rico:Person; rico:hasOrHadOccupationType
+            &lt;https://rdf.archives-nationales.culture.gouv.fr/occupationType/FRAN_RI_010-d3nyu9x713-9kcjiv44l4wh&gt;"@fr</skos:note>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#NoticeAutorite -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#NoticeAutorite">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Record"/>
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="https://www.ica.org/standards/RiC/ontology#hasDocumentaryFormType"/>
+            <owl:hasValue rdf:resource="https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#AuthorityRecord"/>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:comment xml:lang="fr">Notice d’autorité archivistique, qui décrit classiquement une
+            entité contextuelle telle qu’un agent.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">Authority Record</rdfs:label>
+      <rdfs:label xml:lang="fr">Notice d’autorité</rdfs:label>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#QuartierOuParoisse -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#QuartierOuParoisse">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:comment xml:lang="en">Old or current administrative district, neighborhood or parish
+            in Paris.</rdfs:comment>
+      <rdfs:comment xml:lang="fr">Quartier, paroisse ou arrondissement parisien.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">Parisian district or parish</rdfs:label>
+      <rdfs:label xml:lang="fr">Quartier ou paroisse de Paris</rdfs:label>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#Repertoire -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#Repertoire">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Record"/>
+      <rdfs:comment xml:lang="en">List, generally chronological, in the form of a book or set of
+            sheets, which the notary is obliged to keep, today day by day, by including the date,
+            nature of the act (title which characterizes the content, for example: sale, mandate,
+            inventory, etc.), type of act (minute or patent), names of the parties and any other
+            information prescribed by law or regulations. Once filed with the minutes in a public
+            archive, the notarial register is mainly used to locate a given act in the absence of
+            more convenient research tools. Like the minute, it intrinsically has probative
+            value.</rdfs:comment>
+      <rdfs:comment xml:lang="fr">Liste, en général chronologique, se présentant sous forme de
+            registre ou d’ensemble de feuillets, que le notaire a obligation de tenir, aujourd’hui
+            jour par jour, en y faisant figurer date, nature de l’acte (titre qui en caractérise le
+            contenu, par exemple : vente, procuration, inventaire…), espèce de l’acte (minute ou
+            brevet), noms des parties et toutes autres mentions prescrites par la loi ou les
+            règlements. Une fois versé avec les minutes dans un service public d’archives, le
+            répertoire sert principalement à repérer un acte donné en l’absence outils de recherche
+            plus commodes, mais le répertoire, comme la minute, comporte intrinsèquement une valeur
+            probatoire.</rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">Notarial Register</rdfs:label>
+      <rdfs:label xml:lang="fr">Répertoire de notaire</rdfs:label>
+      <skos:note xml:lang="fr">Actuellement, regroupe l'ensemble des : Record ayant pour type
+            de document répertoire - rico:hasDocumentaryFormType
+            &lt;https://rdf.archives-nationales.culture.gouv.fr/documentaryFormType/FRAN_RI_001-d-a04blhkno-92bbw9jou9ed&gt;"@fr
+            .</skos:note>
+   </owl:Class>
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology#VoieParisienne -->
+   <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#VoieParisienne">
+      <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
+      <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
+      <rdfs:label xml:lang="en">Street in Paris</rdfs:label>
+      <rdfs:label xml:lang="fr">Voie de Paris</rdfs:label>
+   </owl:Class>
+   <!-- https://www.ica.org/standards/RiC/ontology#Concept -->
+   <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Concept"/>
+   <!-- https://www.ica.org/standards/RiC/ontology#CorporateBody -->
+   <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#CorporateBody"/>
+   <!-- https://www.ica.org/standards/RiC/ontology#Instantiation -->
+   <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+   <!-- https://www.ica.org/standards/RiC/ontology#Person -->
+   <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Person"/>
+   <!-- https://www.ica.org/standards/RiC/ontology#Place -->
+   <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Place"/>
+   <!-- https://www.ica.org/standards/RiC/ontology#Record -->
+   <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Record"/>
+   <!-- https://www.ica.org/standards/RiC/ontology#RecordPart -->
+   <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#RecordPart"/>
+   <!-- https://www.ica.org/standards/RiC/ontology#RecordResource -->
+   <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+   <!-- https://rdf.archives-nationales.culture.gouv.fr/ontology -->
+   <owl:NamedIndividual rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology">
+      <dcat:version xml:lang="fr">1.0</dcat:version>
+   </owl:NamedIndividual>
+   <!-- https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#AuthorityRecord -->
+   <owl:NamedIndividual rdf:about="https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#AuthorityRecord"/>
+   <!-- https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid -->
+   <owl:NamedIndividual rdf:about="https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid"/>
+   <!-- https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds -->
+   <owl:NamedIndividual rdf:about="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds"/>
+   <rdf:Description>
+      <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+      <foaf:name xml:lang="fr">Archives nationales de France</foaf:name>
+   </rdf:Description>
+   <rdf:Description>
+      <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+      <foaf:name xml:lang="fr">Archives nationales de France</foaf:name>
+   </rdf:Description>
+</rdf:RDF>
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
