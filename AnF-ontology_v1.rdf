@@ -817,8 +817,8 @@
     <owl:Class rdf:about="https://rdf.archives-nationales.culture.gouv.fr/ontology#Adresse">
         <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Place"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
-        <rdfs:label xml:lang="en">Address in Paris</rdfs:label>
-        <rdfs:label xml:lang="fr">Adresse à Paris</rdfs:label>
+        <rdfs:label xml:lang="en">Address</rdfs:label>
+        <rdfs:label xml:lang="fr">Adresse</rdfs:label>
     </owl:Class>
     
 
@@ -835,6 +835,7 @@
             recherche et notices d’autorité.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
         <rdfs:label xml:lang="fr">Archives</rdfs:label>
+        <rdfs:label xml:lang="en">Record(s)</rdfs:label>
     </owl:Class>
     
 
@@ -901,7 +902,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://rdf.archives-nationales.culture.gouv.fr/ontology"/>
-        <rdfs:label xml:lang="fr">Fonds d’archives</rdfs:label>
+        <rdfs:label xml:lang="fr">Fonds</rdfs:label>
+        <rdfs:label xml:lang="en">Fonds</rdfs:label>
     </owl:Class>
     
 
